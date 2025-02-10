@@ -55,3 +55,6 @@ if os.path.isfile(file_path):
         print("An exception occured while loading the model.")
 else:
     print("No such file")
+
+
+# TODO: complete model optimization code based on last two cells of 3_Train_Model.ipynb
