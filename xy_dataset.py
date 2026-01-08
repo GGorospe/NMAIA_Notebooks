@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 
 # EDITED by George Gorospe, george.gorospe@nmaia.net
-# Last updated: 1/14/2024
+# Updated: 1/3/2026 - updated for 1-1000 label
 # This file was originally written by Nvidia and included in their Jetracer github repo.
 # Source: https://github.com/NVIDIA-AI-IOT/jetracer
 
@@ -45,7 +45,7 @@ class XYDataset(torch.utils.data.Dataset):
         if self.transform is not None:
             image = self.transform(image)
         
-        x = 2.0 * (ann['x'] / width - 0.5) # -1 left, +1 right
+        x = 2.0 * (ann['x'] / 1000 - 0.5) # -1 left, +1 right
         y = 2.0 * (ann['y'] / height - 0.5) # -1 top, +1 bottom
         #x = ann['x']
         #y = ann['y']
